@@ -101,6 +101,7 @@ p {
 
 /* LAYOUT */
 main {
+  position: relative;
   width: 343px;
   margin-top: 6.5em;
   margin-inline: auto;
@@ -110,6 +111,7 @@ main {
 }
 
 form {
+  margin-bottom: 3.5em;
   border-bottom: 1px solid var(--clr-neutral-300);
 }
 
@@ -136,6 +138,7 @@ form {
   align-items: stretch;
   flex: 1 0 54px;
   width: 87px;
+  margin-bottom: 3em;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -145,6 +148,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 button {
+  position: absolute;
   padding: 1em;
   border-radius: 50%;
   background-color: var(--clr-acccent-purple);
