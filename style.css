@@ -88,7 +88,7 @@ input {
   color: var(--clr-neutral-600);
 }
 
-p {
+.output-info {
   font-size: clamp(3.5rem, 2.7623rem + 3.1475vw, 6.5rem);
   font-weight: 800;
   font-style: italic;
@@ -107,6 +107,9 @@ p {
 .warning-msg {
   font-weight: 400;
   font-style: italic;
+  margin: -4.5em 0 3em 0;
+  padding: 0;
+  order: 3;
 }
 
 /* LAYOUT */

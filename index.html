@@ -14,24 +14,27 @@
     <form id="form">
       <div class="inputs">
         <div class="input-grp">
-          <label for="day">Day</label>
+          <label for="day" id="dayLabel">Day</label>
           <input type="number" name="day" id="day" min="1" max="31" value="" placeholder="DD">
+          <p id="dayWarningMsg"></p>
         </div>
         <div class="input-grp">
-          <label for="month">Month</label>
-          <input type="number" name="month" id="month" min="1" max="12" value="" placeholder="MM">
+          <label for="month" id="mthLabel">Month</label>
+          <input type="number" name="month" id="month" value="" placeholder="MM">
+          <p id="mthWarningMsg"></p>
         </div>
         <div class="input-grp">
-          <label for="year">Year</label>
-          <input type="number" name="year" id="year" min="0" max="2023" value="" placeholder="YY">
+          <label for="year" id="yearLabel">Year</label>
+          <input type="number" name="year" id="year" value="" placeholder="YY">
+          <p id="yearWarningMsg"></p>
         </div>
       </div>
       <button><svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="4"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg></button>
     </form>
     <section class="output">
-      <p><span id="years" class="numbers">--</span>years</p>
-      <p><span id="months" class="numbers">--</span>months</p>
-      <p><span id="days"class="numbers" >--</span>days</p>
+      <p class="output-info"><span id="years" class="numbers">--</span>years</p>
+      <p class="output-info"><span id="months" class="numbers">--</span>months</p>
+      <p class="output-info"><span id="days"class="numbers" >--</span>days</p>
     </section>
   </main>
   <script src="index.js"></script>
