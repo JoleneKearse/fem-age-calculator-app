@@ -1,23 +1,24 @@
-# Frontend Mentor - Age calculator app solution
+# _Frontend Mentor_ - Age calculator app solution 🧮  
 
 This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Table of contents
+## Table of contents 📜
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Overview 🔍](#overview)
+  - [The challenge 🚵](#the-challenge)
+  - [Screenshot 📷](#screenshot)
+  - [Links 🖇️](#links)
+- [My process 👩‍💻](#my-process)
+  - [Built with ⚒️](#built-with)
+  - [What I learned 📔](#what-i-learned)
+    - [How to use provided fonts! 🫣]()
+  - [Continued development 🎓](#continued-development)
+  - [Useful resources 🗒️](#useful-resources)
+- [Author 🙃](#author)
 
-## Overview
+## Overview 🔍
 
-### The challenge
+### The challenge 🚵
 
 Users should be able to:
 
@@ -32,7 +33,7 @@ Users should be able to:
 - [ ] See hover and focus states for all interactive elements on the page
 - [ ] **Bonus**: See the age numbers animate to their final number when the form is submitted
 
-### Screenshot
+### Screenshot 📷
 
 Here is the Figma design:
 ![figma design showing desktop with error messages and mobile](screenshots/figma-design.png)
@@ -42,14 +43,14 @@ And here's my solution:
 
 
 
-### Links
+### Links 🖇️
 
 - Solution URL: [Github](https://github.com/JoleneKearse/fem-age-calculator-app)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+## My process 👩‍💻
 
-### Built with
+### Built with ⚒️
 
 - Semantic HTML5 markup
 - `@font-face`
@@ -58,7 +59,7 @@ And here's my solution:
 - CSS Grid
 - Mobile-first workflow
 
-### What I learned
+### What I learned 📔
 
 #### How to use provided fonts! 🫣
 
@@ -83,17 +84,17 @@ I found out you needed to declare the specifics to avoid the browsers' _faux ver
 
 ![Browwser rendered font styles and their true counterparts](screenshots/faux-vs-true.png)
 
-### Continued development
+### Continued development 🎓
 
 
 
-### Useful resources
+### Useful resources 🗒️
 
 - [Loading a Self-Hosted Font with `@font-face`](https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#loading-a-self-hosted-font-with-font-face) - This showed me how to use provided fonts via CSS and how to avoid _faux_ rendering.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 
-## Author
+## Author 🙃
 
 Hiya! 👋 My name is **Jolene Kearse**.  
 
