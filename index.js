@@ -38,7 +38,6 @@ const handleYearErrors = () => {
 const handleSubmit = (e) => {
   e.preventDefault();
   // check for errors
-  // check for empty values
   if (day.value == "") {
     dayLabel.classList.add("warning");
     dayWarningMsg.innerText = "This field is required";
@@ -48,7 +47,7 @@ const handleSubmit = (e) => {
   if (month.value == "" || month.value < 1 || month.value > 12) {
     handleMonthErrors();
   }
-  if (year.value == "") {
+  if (year.value == "" || year.value > currentYear) {
     handleYearErrors();
   }
   // check if day not in month
@@ -64,10 +63,6 @@ const handleSubmit = (e) => {
     dayWarningMsg.innerText = "Must be a valid day";
     dayWarningMsg.classList.add("warning");
     dayWarningMsg.classList.add("warning-msg");
-  }
-  // check if year in the future
-  if (year.value > currentYear) {
-    handleYearErrors();
   }
 };
 
