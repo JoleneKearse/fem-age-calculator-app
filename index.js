@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
     dayWarningMsg.classList.add("warning");
     dayWarningMsg.classList.add("warning-msg");
   }
-  if (month.value == "") {
+  if (month.value == "" || month.value < 1 || month.value > 12) {
     handleMonthErrors();
   }
   if (year.value == "") {
@@ -64,10 +64,6 @@ const handleSubmit = (e) => {
     dayWarningMsg.innerText = "Must be a valid day";
     dayWarningMsg.classList.add("warning");
     dayWarningMsg.classList.add("warning-msg");
-  }
-  // check if not valid month
-  if (month.value < 1 || month.value > 12) {
-    handleMonthErrors();
   }
   // check if year in the future
   if (year.value > currentYear) {
