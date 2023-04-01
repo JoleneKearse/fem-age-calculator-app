@@ -11,8 +11,34 @@ const yearWarningMsg = document.getElementById("yearWarningMsg");
 const date = new Date();
 const currentYear = date.getFullYear();
 
+// FUNCTIONS
+// add text & classes
+const handleMonthErrors = () => {
+  mthLabel.classList.add("warning");
+  mthWarningMsg.classList.add("warning");
+  mthWarningMsg.classList.add("warning-msg");
+  if (month.value == "") {
+    mthWarningMsg.innerText = "This field is required";
+  } else if (month.value < 1 || month.value > 12) {
+    mthWarningMsg.innerText = "Must be a valid month";
+  }
+};
+
+const handleYearErrors = () => {
+  yearLabel.classList.add("warning");
+  yearWarningMsg.classList.add("warning");
+  yearWarningMsg.classList.add("warning-msg");
+  if (year.value == "") {
+    yearWarningMsg.innerText = "This field is required";
+  } else if (year.value > currentYear) {
+    yearWarningMsg.innerText = "Must be in the past";
+  }
+};
+
 const handleSubmit = (e) => {
   e.preventDefault();
+  // check for errors
+  // check for empty values
   if (day.value == "") {
     dayLabel.classList.add("warning");
     dayWarningMsg.innerText = "This field is required";
@@ -20,28 +46,32 @@ const handleSubmit = (e) => {
     dayWarningMsg.classList.add("warning-msg");
   }
   if (month.value == "") {
-    mthLabel.classList.add("warning");
-    mthWarningMsg.innerText = "This field is required";
-    mthWarningMsg.classList.add("warning");
-    mthWarningMsg.classList.add("warning-msg");
+    handleMonthErrors();
   }
   if (year.value == "") {
-    yearLabel.classList.add("warning");
-    yearWarningMsg.innerText = "This field is required";
-    yearWarningMsg.classList.add("warning");
-    yearWarningMsg.classList.add("warning-msg");
+    handleYearErrors();
   }
+  // check if day not in month
+  // check if day under 0
+  if (day.value < 1) {
+    dayLabel.classList.add("warning");
+    dayWarningMsg.innerText = "Must be a valid day";
+    dayWarningMsg.classList.add("warning");
+    dayWarningMsg.classList.add("warning-msg");
+  }
+  if (day.value > 31 && month.value == 1) {
+    dayLabel.classList.add("warning");
+    dayWarningMsg.innerText = "Must be a valid day";
+    dayWarningMsg.classList.add("warning");
+    dayWarningMsg.classList.add("warning-msg");
+  }
+  // check if not valid month
   if (month.value < 1 || month.value > 12) {
-    mthLabel.classList.add("warning");
-    mthWarningMsg.innerText = "Must be a valid month";
-    mthWarningMsg.classList.add("warning");
-    mthWarningMsg.classList.add("warning-msg");
+    handleMonthErrors();
   }
+  // check if year in the future
   if (year.value > currentYear) {
-    yearLabel.classList.add("warning");
-    yearWarningMsg.innerText = "Must be in the past";
-    yearWarningMsg.classList.add("warning");
-    yearWarningMsg.classList.add("warning-msg");
+    handleYearErrors();
   }
 };
 
