@@ -83,9 +83,12 @@ p {
   color: var(--clr-acccent-purple);
 }
 
-.button {
+svg {
   fill: var(--clr-neutral-900);
 }
 
 /* LAYOUT */
+form {
+  border-bottom: 1px solid var(--clr-neutral-300);
+}
 
