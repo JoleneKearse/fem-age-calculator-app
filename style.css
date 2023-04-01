@@ -65,6 +65,7 @@ body {
   font-size: clamp(0.75rem, 0.7193rem + 0.1311vw, 0.875rem);
   font-weight: 700;
   color: var(--clr-neutral-900);
+  background-color: var(--clr-neutral-200);
 }
 
 /* TYPOGRAPHY */
@@ -86,6 +87,15 @@ p {
 
 
 /* LAYOUT */
+main {
+  width: 343px;
+  margin-top: 6.25em;
+  margin-inline: auto;
+  padding: 1em;
+  border-radius: 1.5em 1.5em 6.25em 1.5em;
+  background-color: var(--clr-neutral-100);
+}
+
 form {
   border-bottom: 1px solid var(--clr-neutral-300);
 }
