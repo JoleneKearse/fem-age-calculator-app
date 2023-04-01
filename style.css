@@ -79,6 +79,7 @@ input {
   padding: .75em 1em;
   border: 1px solid var(--clr-neutral-300);
   border-radius: .5rem;
+  font-size: clamp(1.25rem, 1.0656rem + 0.7869vw, 2rem);
 }
 
 :placeholder-shown {
@@ -96,7 +97,6 @@ p {
 .numbers {
   color: var(--clr-acccent-purple);
 }
-
 
 /* LAYOUT */
 main {
@@ -118,6 +118,12 @@ form {
   gap: 1rem;
 }
 
+.input-grp {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
 .inputs label {
   order: 0;
   padding-bottom: .4rem;
@@ -125,8 +131,15 @@ form {
 
 .inputs input {
   order: 1;
-  /* flex: 1 1 87px; */
   align-items: stretch;
+  flex: 1 0 54px;
+  width: 87px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 button {
