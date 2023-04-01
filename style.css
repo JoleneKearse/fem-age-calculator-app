@@ -96,6 +96,7 @@ p {
 }
 
 .numbers {
+  padding-right: .1em;
   color: var(--clr-acccent-purple);
 }
 
