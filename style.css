@@ -150,10 +150,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 button {
   position: absolute;
-  top: 14em;
+  top: 12.5em;
   left: 50%;
   transform: translateX(-50%);
-  padding: 1.25em;
+  padding: 2em;
   border-radius: 50%;
   background-color: var(--clr-acccent-purple);
 }
@@ -161,6 +161,8 @@ button {
 svg {
   width: 2em;
   height: 2em;
-  stroke-width: 10;
 }
 
+.output {
+  margin-bottom: 1.5em;
+}
