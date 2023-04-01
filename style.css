@@ -70,6 +70,17 @@ body {
 }
 
 /* TYPOGRAPHY */
+label {
+  text-transform: uppercase;
+  color: var(--clr-neutral-600);
+}
+
+input {
+  padding: .75em 1em;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: .5rem;
+}
+
 :placeholder-shown {
   font-size: clamp(1.25rem, 1.0656rem + 0.7869vw, 2rem);
   color: var(--clr-neutral-600);
@@ -99,6 +110,23 @@ main {
 
 form {
   border-bottom: 1px solid var(--clr-neutral-300);
+}
+
+.inputs {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.inputs label {
+  order: 0;
+  padding-bottom: .4rem;
+}
+
+.inputs input {
+  order: 1;
+  /* flex: 1 1 87px; */
+  align-items: stretch;
 }
 
 button {
