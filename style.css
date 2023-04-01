@@ -103,7 +103,7 @@ p {
 main {
   position: relative;
   width: 343px;
-  margin-top: 6.5em;
+  margin-top: 6.75em;
   margin-inline: auto;
   padding: 3em 1.5em 3em 1.5em;
   border-radius: 1.5em 1.5em 6.25em 1.5em;
@@ -111,7 +111,7 @@ main {
 }
 
 form {
-  margin-bottom: 3.5em;
+  margin-bottom: 6em;
   border-bottom: 1px solid var(--clr-neutral-300);
 }
 
@@ -152,7 +152,7 @@ button {
   top: 14em;
   left: 50%;
   transform: translateX(-50%);
-  padding: 1em;
+  padding: 1.25em;
   border-radius: 50%;
   background-color: var(--clr-acccent-purple);
 }
