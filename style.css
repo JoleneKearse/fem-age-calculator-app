@@ -68,10 +68,23 @@ body {
 }
 
 /* TYPOGRAPHY */
+:placeholder-shown {
+  font-size: clamp(1.25rem, 1.0656rem + 0.7869vw, 2rem);
+  color: var(--clr-neutral-600);
+}
+
 p {
   font-size: clamp(3.5rem, 2.7623rem + 3.1475vw, 6.5rem);
   font-weight: 800;
   font-style: italic;
+}
+
+.numbers {
+  color: var(--clr-acccent-purple);
+}
+
+.button {
+  fill: var(--clr-neutral-900);
 }
 
 /* LAYOUT */
