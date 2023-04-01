@@ -13,6 +13,16 @@ const currentYear = date.getFullYear();
 
 // FUNCTIONS
 // add text & classes
+const handleDayErrors = () => {
+  dayLabel.classList.add("warning");
+  dayWarningMsg.classList.add("warning");
+  dayWarningMsg.classList.add("warning-msg");
+  if (day.value == "") {
+    dayWarningMsg.innerText = "This field is required";
+  } else {
+    dayWarningMsg.innerText = "Must be a valid day";
+  }
+};
 const handleMonthErrors = () => {
   mthLabel.classList.add("warning");
   mthWarningMsg.classList.add("warning");
@@ -35,14 +45,27 @@ const handleYearErrors = () => {
   }
 };
 
+// catch user input errors
 const handleSubmit = (e) => {
   e.preventDefault();
   // check for errors
-  if (day.value == "") {
-    dayLabel.classList.add("warning");
-    dayWarningMsg.innerText = "This field is required";
-    dayWarningMsg.classList.add("warning");
-    dayWarningMsg.classList.add("warning-msg");
+  if (day.value == "" || day.value < 1) {
+    handleDayErrors();
+  }
+  if (
+    (day.value > 31 && month.value == 1) ||
+    (day.value > 31 && month.value == 3) ||
+    (day.value > 31 && month.value == 5) ||
+    (day.value > 31 && month.value == 7) ||
+    (day.value > 31 && month.value == 8) ||
+    (day.value > 31 && month.value == 10) ||
+    (day.value > 31 && month.value == 12) ||
+    (day.value > 30 && month.value == 4) ||
+    (day.value > 30 && month.value == 6) ||
+    (day.value > 30 && month.value == 9) ||
+    (day.value > 30 && month.value == 11)
+  ) {
+    handleDayErrors();
   }
   if (month.value == "" || month.value < 1 || month.value > 12) {
     handleMonthErrors();
@@ -52,13 +75,11 @@ const handleSubmit = (e) => {
   }
   // check if day not in month
   // check if day under 0
-  if (day.value < 1) {
-    dayLabel.classList.add("warning");
-    dayWarningMsg.innerText = "Must be a valid day";
-    dayWarningMsg.classList.add("warning");
-    dayWarningMsg.classList.add("warning-msg");
-  }
-  if (day.value > 31 && month.value == 1) {
+
+  if (
+    (day.value > 31 && month.value == 1) ||
+    (day.value > 31 && month.value == 3)
+  ) {
     dayLabel.classList.add("warning");
     dayWarningMsg.innerText = "Must be a valid day";
     dayWarningMsg.classList.add("warning");
