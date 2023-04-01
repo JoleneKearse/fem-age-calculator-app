@@ -4,17 +4,17 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ## Table of contents 📜
 
-- [Overview 🔍](#overview)
-  - [The challenge 🚵](#the-challenge)
-  - [Screenshot 📷](#screenshot)
-  - [Links 🖇️](#links)
-- [My process 👩‍💻](#my-process)
-  - [Built with ⚒️](#built-with)
-  - [What I learned 📔](#what-i-learned)
-    - [How to use provided fonts! 🫣]()
-  - [Continued development 🎓](#continued-development)
-  - [Useful resources 🗒️](#useful-resources)
-- [Author 🙃](#author)
+- [Overview 🔍](https://github.com/JoleneKearse/fem-age-calculator-app#overview-)
+  - [The challenge 🚵](https://github.com/JoleneKearse/fem-age-calculator-app#the-challenge-)
+  - [Screenshot 📷](https://github.com/JoleneKearse/fem-age-calculator-app#screenshot-)
+  - [Links 🖇️](https://github.com/JoleneKearse/fem-age-calculator-app#links-%EF%B8%8F)
+- [My process 👩‍💻](https://github.com/JoleneKearse/fem-age-calculator-app#my-process-)
+  - [Built with ⚒️](https://github.com/JoleneKearse/fem-age-calculator-app#built-with-%EF%B8%8F)
+  - [What I learned 📔](https://github.com/JoleneKearse/fem-age-calculator-app#what-i-learned-)
+    - [How to use provided fonts! 🫣](https://github.com/JoleneKearse/fem-age-calculator-app#how-to-use-provided-fonts-)
+  - [Continued development 🎓](https://github.com/JoleneKearse/fem-age-calculator-app#continued-development-)
+  - [Useful resources 🗒️](https://github.com/JoleneKearse/fem-age-calculator-app#useful-resources-%EF%B8%8F)
+- [Author 🙃](https://github.com/JoleneKearse/fem-age-calculator-app#author-)
 
 ## Overview 🔍
 
