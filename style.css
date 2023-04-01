@@ -2,7 +2,23 @@
 
 
 /* RESET */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
 
+label,
+input,
+placeholder,
+button {
+  font: inherit;
+}
 
 /* TYPOGRAPHY */
 
