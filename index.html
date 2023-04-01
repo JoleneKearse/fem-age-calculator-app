@@ -11,19 +11,19 @@
 </head>
 <body>
   <main>
-    <form>
+    <form id="form">
       <div class="inputs">
         <div class="input-grp">
           <label for="day">Day</label>
-          <input type="number" name="day" id="day" min="1" max="31" placeholder="DD">
+          <input type="number" name="day" id="day" min="1" max="31" value="" placeholder="DD">
         </div>
         <div class="input-grp">
           <label for="month">Month</label>
-          <input type="number" name="month" id="month" min="1" max="12" placeholder="MM">
+          <input type="number" name="month" id="month" min="1" max="12" value="" placeholder="MM">
         </div>
         <div class="input-grp">
           <label for="year">Year</label>
-          <input type="number" name="year" id="year" min="0" max="2023" placeholder="YY">
+          <input type="number" name="year" id="year" min="0" max="2023" value="" placeholder="YY">
         </div>
       </div>
       <button><svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="4"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg></button>
@@ -34,5 +34,6 @@
       <p><span id="days"class="numbers" >--</span>days</p>
     </section>
   </main>
+  <script src="index.js"></script>
 </body>
 </html>
