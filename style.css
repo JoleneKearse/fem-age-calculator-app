@@ -106,3 +106,9 @@ button {
   background-color: var(--clr-acccent-purple);
 }
 
+svg {
+  width: 2em;
+  height: 2em;
+  stroke-width: 10;
+}
+
