@@ -17,6 +17,8 @@ const yearDisplay = document.getElementById("years");
 const date = new Date();
 const currentYear = date.getFullYear();
 
+const outputSection = document.getElementById("output");
+
 // FUNCTIONS
 // add text & classes
 const handleDayErrors = () => {
@@ -77,7 +79,7 @@ const handleSubmit = (e) => {
   // check day input
   if (day.value == "" || day.value < 1) {
     handleDayErrors();
-    dayError - true;
+    dayError = true;
   } else if (
     (day.value > 31 && month.value == 1) ||
     (day.value > 31 && month.value == 3) ||
@@ -129,22 +131,19 @@ function calculateAndReturnStats() {
   diff -= returnMonths * (1000 * 60 * 60 * 24 * 30.44);
   // get days
   const returnDays = Math.floor(diff / (1000 * 60 * 60 * 24));
-  // display to user if integer
-  if (typeof returnYears === "number") {
+
+  // display stats to user
+  yearDisplay.classList.add("fade-out");
+  mthDisplay.classList.add("fade-out");
+  dayDisplay.classList.add("fade-out");
+  setTimeout(function () {
     yearDisplay.innerText = returnYears;
-  } else {
-    yearDisplay.innerText = "--";
-  }
-  if (typeof returnMonths === "number") {
     mthDisplay.innerText = returnMonths;
-  } else {
-    mthDisplay.innerText = "--";
-  }
-  if (typeof returnDays === "number") {
     dayDisplay.innerText = returnDays;
-  } else {
-    dayDisplay.innerText = "--";
-  }
+    yearDisplay.classList.add("fade-in");
+    mthDisplay.classList.add("fade-in");
+    dayDisplay.classList.add("fade-in");
+  }, 1000);
 }
 
 document.getElementById("form").addEventListener("submit", handleSubmit);

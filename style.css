@@ -191,6 +191,23 @@ svg {
 
 .output {
   margin-bottom: 1.5em;
+  transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+/* number animation */
+span,
+#years, 
+#months,
+#days {
+  transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 /* MEDIA QUERIES */
