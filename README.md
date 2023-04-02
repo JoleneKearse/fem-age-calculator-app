@@ -12,6 +12,7 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
   - [Built with ⚒️](https://github.com/JoleneKearse/fem-age-calculator-app#built-with-%EF%B8%8F)
   - [What I learned 📔](https://github.com/JoleneKearse/fem-age-calculator-app#what-i-learned-)
     - [How to use provided fonts! 🫣](https://github.com/JoleneKearse/fem-age-calculator-app#how-to-use-provided-fonts-)
+    - [How to do multiple conditions in an if statment]()
   - [Continued development 🎓](https://github.com/JoleneKearse/fem-age-calculator-app#continued-development-)
   - [Useful resources 🗒️](https://github.com/JoleneKearse/fem-age-calculator-app#useful-resources-%EF%B8%8F)
 - [Author 🙃](https://github.com/JoleneKearse/fem-age-calculator-app#author-)
@@ -22,13 +23,13 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 Users should be able to:
 
-- [ ] View an age in years, months, and days after submitting a valid date through the form
-- [ ] Receive validation errors if:
-  - [ ] Any field is empty when the form is submitted
-  - [ ] The day number is not between 1-31
-  - [ ] The month number is not between 1-12
-  - [ ] The year is in the future
-  - [ ] The date is invalid e.g. 31/04/1991 (there are 30 days in April)
+- [x] View an age in years, months, and days after submitting a valid date through the form
+- [x] Receive validation errors if:
+  - [x] Any field is empty when the form is submitted
+  - [x] The day number is not between 1-31
+  - [x] The month number is not between 1-12
+  - [x] The year is in the future
+  - [x] The date is invalid e.g. 31/04/1991 (there are 30 days in April)
 - [ ] View the optimal layout for the interface depending on their device's screen size
 - [ ] See hover and focus states for all interactive elements on the page
 - [ ] **Bonus**: See the age numbers animate to their final number when the form is submitted
@@ -45,8 +46,8 @@ And here's my solution:
 
 ### Links 🖇️
 
-- Solution URL: [Github](https://github.com/JoleneKearse/fem-age-calculator-app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Github](https://github.com/JoleneKearse/fem-age-calculator-app)
+- [Live Site URL](https://fem-age-calculator-app.vercel.app/)
 
 ## My process 👩‍💻
 
@@ -56,18 +57,17 @@ And here's my solution:
 - `@font-face`
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned 📔
 
 #### How to use provided fonts! 🫣
 
-When starting up my **stylesheet**, I went to **[Google Fonts](https://fonts.google.com/) out of habit, selected the needed styles, and started copy and pasting what I _thought_ I needed...
+When starting up my **stylesheet**, I went to **[Google Fonts](https://fonts.google.com/)** out of habit, selected the needed styles, and started copy and pasting what I _thought_ I needed...
 
-But hold up! I see a `fonts` directory in my `assets`. 
+But **hold up**! I see a `fonts` directory in my `assets`. 
 
-I'd never seen that, so I had to do some Googling. _Like I could've totally continued business-as-usual, but what a great opportunity to learn!_ 
+I'd _never_ seen that, so I had to do some Googling. _Like I could've totally continued business-as-usual, but what a great opportunity to learn!_ 
 
 So I set it up at the top of my stylesheet. Specifically declaring weights and styles:
 
@@ -84,14 +84,36 @@ I found out you needed to declare the specifics to avoid the browsers' _faux ver
 
 ![Browwser rendered font styles and their true counterparts](screenshots/faux-vs-true.png)
 
+#### How to do multiple conditions in an if statment
+
+I wanted to show an **error message** for multiple conditions and really liked that I could use **parentheses within parantheses** in the condition parentheses:
+
+```js
+ if (
+    (day.value > 31 && month.value == 1) ||
+    (day.value > 31 && month.value == 3) ||
+    (day.value > 31 && month.value == 5) ||
+    (day.value > 31 && month.value == 7) ||
+    (day.value > 31 && month.value == 8) ||
+    (day.value > 31 && month.value == 10) ||
+    (day.value > 31 && month.value == 12) ||
+    (day.value > 30 && month.value == 4) ||
+    (day.value > 30 && month.value == 6) ||
+    (day.value > 30 && month.value == 9) ||
+    (day.value > 30 && month.value == 11)
+  ) {
+    handleDayErrors();
+  }
+  ```
+
 ### Continued development 🎓
 
-
+This took me quite a long time, so I will continue to work on **Vanilla JavaScript** projects alongside my **React** learning!
 
 ### Useful resources 🗒️
 
 - [Loading a Self-Hosted Font with `@font-face`](https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#loading-a-self-hosted-font-with-font-face) - This showed me how to use provided fonts via CSS and how to avoid _faux_ rendering.
-- [How to Write Good Commit Messages: A Practical Git Guide](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/) - This article has a simple listing of commit types. I found it useful to remind me of **style** as I had been using **feat** for just about everything, even though that hadn't made sense to me. 🤣
+- [How to Write Good Commit Messages: A Practical Git Guide](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/) - This article has a simple listing of commit types. I found it useful to remind me of **style** as I had been using '**feat**' for just about everything, even though that hadn't made sense to me. 🤣
 
 
 ## Author 🙃
