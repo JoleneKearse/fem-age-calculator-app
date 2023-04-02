@@ -79,7 +79,7 @@ label {
 }
 
 input {
-  padding: .75em 1em;
+  padding: .5em .75em;
   border: 1px solid var(--clr-neutral-300);
   border-radius: .5rem;
   font-size: clamp(1.25rem, 1.0656rem + 0.7869vw, 2rem);
