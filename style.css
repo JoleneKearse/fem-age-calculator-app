@@ -182,3 +182,26 @@ svg {
 .output {
   margin-bottom: 1.5em;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 400px) {
+  button {
+    top: 13em;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    width: 85%;
+  }
+  button {
+    top: 13.25em;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    width: 85%;
+  }
+  button {
+    top: 13.25em;
+  }
+}
