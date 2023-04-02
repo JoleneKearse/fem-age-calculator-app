@@ -1,12 +1,18 @@
 const day = document.getElementById("day");
 const dayLabel = document.getElementById("dayLabel");
 const dayWarningMsg = document.getElementById("dayWarningMsg");
+const dayDisplay = document.getElementById("days");
+
 const month = document.getElementById("month");
 const mthLabel = document.getElementById("mthLabel");
 const mthWarningMsg = document.getElementById("mthWarningMsg");
+const mthDisplay = document.getElementById("months");
+
 const year = document.getElementById("year");
 const yearLabel = document.getElementById("yearLabel");
 const yearWarningMsg = document.getElementById("yearWarningMsg");
+const yearDisplay = document.getElementById("years");
+
 // get current year to validate form
 const date = new Date();
 const currentYear = date.getFullYear();
@@ -52,7 +58,7 @@ const checkLeapYear = () => {
     (0 == yearToCheck % 4 && 0 != yearToCheck % 100) ||
     0 == yearToCheck % 400
   ) {
-    calculateStats();
+    calculateAndReturnStats();
   } else {
     handleDayErrors();
   }
@@ -93,6 +99,27 @@ const handleSubmit = (e) => {
   if (year.value == "" || year.value > currentYear) {
     handleYearErrors();
   }
+  // ************ MIGHT BE A MISTAKE **************
+  calculateAndReturnStats();
 };
+
+// calculate years, months & days
+function calculateAndReturnStats() {
+  const userEnteredDate = new Date(`${year.value}-${month.value}-${day.value}`);
+  // get difference in milliseconds
+  let diff = Math.abs(date.getTime() - userEnteredDate.getTime());
+  // get years
+  const returnYears = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+  diff -= returnYears * (1000 * 60 * 60 * 24 * 365.25);
+  // get months
+  const returnMonths = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
+  diff -= returnMonths * (1000 * 60 * 60 * 24 * 30.44);
+  // get days
+  const returnDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+  // display to user
+  yearDisplay.innerText = returnYears;
+  mthDisplay.innerText = returnMonths;
+  dayDisplay.innerText = returnDays;
+}
 
 document.getElementById("form").addEventListener("submit", handleSubmit);
