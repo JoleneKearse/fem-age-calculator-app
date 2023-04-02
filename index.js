@@ -17,8 +17,6 @@ const yearDisplay = document.getElementById("years");
 const date = new Date();
 const currentYear = date.getFullYear();
 
-const outputSection = document.getElementById("output");
-
 // FUNCTIONS
 // add text & classes
 const handleDayErrors = () => {
