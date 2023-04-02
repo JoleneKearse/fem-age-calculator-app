@@ -175,6 +175,7 @@ button {
   padding: 2em;
   border-radius: 50%;
   background-color: var(--clr-acccent-purple);
+  cursor: pointer;
 }
 
 button:active {
