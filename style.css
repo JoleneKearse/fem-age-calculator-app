@@ -35,8 +35,7 @@
   --clr-neutral-900: #000000;
   --clr-acccent-purple: #854DFF;
   --clr-acccent-red: #FF5959;
-
-
+  color-scheme: light;
 }
 
 /* RESET */
