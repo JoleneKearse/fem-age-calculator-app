@@ -71,8 +71,7 @@ const handleSubmit = (e) => {
   // check day input
   if (day.value == "" || day.value < 1) {
     handleDayErrors();
-  }
-  if (
+  } else if (
     (day.value > 31 && month.value == 1) ||
     (day.value > 31 && month.value == 3) ||
     (day.value > 31 && month.value == 5) ||
@@ -86,20 +85,18 @@ const handleSubmit = (e) => {
     (day.value > 30 && month.value == 11)
   ) {
     handleDayErrors();
-  }
-  // check if leap year
-  if (day.value >= 29 && month.value == 2) {
+  } else if (day.value >= 29 && month.value == 2) {
+    // check if leap year
     checkLeapYear();
-  }
-  // check month input
-  if (month.value == "" || month.value < 1 || month.value > 12) {
+  } else if (month.value == "" || month.value < 1 || month.value > 12) {
+    // check month input
     handleMonthErrors();
-  }
-  // check year input
-  if (year.value == "" || year.value > currentYear) {
+  } else if (year.value == "" || year.value > currentYear) {
+    // check year input
     handleYearErrors();
+  } else {
+    calculateAndReturnStats();
   }
-  calculateAndReturnStats();
 };
 
 // calculate years, months & days
@@ -115,10 +112,22 @@ function calculateAndReturnStats() {
   diff -= returnMonths * (1000 * 60 * 60 * 24 * 30.44);
   // get days
   const returnDays = Math.floor(diff / (1000 * 60 * 60 * 24));
-  // display to user
-  yearDisplay.innerText = returnYears;
-  mthDisplay.innerText = returnMonths;
-  dayDisplay.innerText = returnDays;
+  // display to user if integer
+  if (typeof returnYears === "number") {
+    yearDisplay.innerText = returnYears;
+  } else {
+    yearDisplay.innerText = "--";
+  }
+  if (typeof returnMonths === "number") {
+    mthDisplay.innerText = returnMonths;
+  } else {
+    mthDisplay.innerText = "--";
+  }
+  if (typeof returnDays === "number") {
+    dayDisplay.innerText = returnDays;
+  } else {
+    dayDisplay.innerText = "--";
+  }
 }
 
 document.getElementById("form").addEventListener("submit", handleSubmit);
