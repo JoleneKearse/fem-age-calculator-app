@@ -99,7 +99,6 @@ const handleSubmit = (e) => {
   if (year.value == "" || year.value > currentYear) {
     handleYearErrors();
   }
-  // ************ MIGHT BE A MISTAKE **************
   calculateAndReturnStats();
 };
 
