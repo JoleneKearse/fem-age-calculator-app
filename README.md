@@ -84,6 +84,12 @@ I found out you needed to declare the specifics to avoid the browsers' _faux ver
 
 ![Browwser rendered font styles and their true counterparts](screenshots/faux-vs-true.png)
 
+By using **Lighthouse**, I also learned to add `font-display: swap` to speed up performance.
+
+_In addition, it pointed out some accessibility issues to improve my score.
+
+![Lighthouse scores of 100 across the board](screenshots/lighthouse.png)
+
 #### How to do multiple conditions in an if statment
 
 I wanted to show an **error message** for multiple conditions and really liked that I could use **parentheses within parantheses** in the condition parentheses:
