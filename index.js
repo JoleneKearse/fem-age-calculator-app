@@ -23,6 +23,7 @@ const handleDayErrors = () => {
     dayWarningMsg.innerText = "Must be a valid day";
   }
 };
+
 const handleMonthErrors = () => {
   mthLabel.classList.add("warning");
   mthWarningMsg.classList.add("warning");
@@ -45,10 +46,23 @@ const handleYearErrors = () => {
   }
 };
 
+const checkLeapYear = () => {
+  const yearToCheck = year.value;
+  if (
+    (0 == yearToCheck % 4 && 0 != yearToCheck % 100) ||
+    0 == yearToCheck % 400
+  ) {
+    calculateStats();
+  } else {
+    handleDayErrors();
+  }
+};
+
 // catch user input errors
 const handleSubmit = (e) => {
   e.preventDefault();
-  // check for errors
+  // VALIDATE USER INPUT
+  // check day input
   if (day.value == "" || day.value < 1) {
     handleDayErrors();
   }
@@ -67,23 +81,17 @@ const handleSubmit = (e) => {
   ) {
     handleDayErrors();
   }
+  // check if leap year
+  if (day.value >= 29 && month.value == 2) {
+    checkLeapYear();
+  }
+  // check month input
   if (month.value == "" || month.value < 1 || month.value > 12) {
     handleMonthErrors();
   }
+  // check year input
   if (year.value == "" || year.value > currentYear) {
     handleYearErrors();
-  }
-  // check if day not in month
-  // check if day under 0
-
-  if (
-    (day.value > 31 && month.value == 1) ||
-    (day.value > 31 && month.value == 3)
-  ) {
-    dayLabel.classList.add("warning");
-    dayWarningMsg.innerText = "Must be a valid day";
-    dayWarningMsg.classList.add("warning");
-    dayWarningMsg.classList.add("warning-msg");
   }
 };
 
