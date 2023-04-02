@@ -5,6 +5,7 @@
   src: url("assets/fonts/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Extra Bold Italic */
@@ -13,6 +14,7 @@
   src: url("assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Italic */
@@ -21,6 +23,7 @@
   src: url("assets/fonts/Poppins-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 /* CUSTOM PROPERTIES */
