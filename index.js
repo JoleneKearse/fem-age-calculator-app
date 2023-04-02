@@ -23,17 +23,17 @@ const handleDayErrors = () => {
   dayLabel.classList.add("warning");
   dayWarningMsg.classList.add("warning");
   dayWarningMsg.classList.add("warning-msg");
-  if (day.value == "") {
-    dayWarningMsg.innerText = "This field is required";
-  } else {
-    dayWarningMsg.innerText = "Must be a valid day";
-  }
+  // return warning message
+  day.value == ""
+    ? (dayWarningMsg.innerText = "This field is required")
+    : (dayWarningMsg.innerText = "Must be a valid day");
 };
 
 const handleMonthErrors = () => {
   mthLabel.classList.add("warning");
   mthWarningMsg.classList.add("warning");
   mthWarningMsg.classList.add("warning-msg");
+  // return warning message
   if (month.value == "") {
     mthWarningMsg.innerText = "This field is required";
   } else if (month.value < 1 || month.value > 12) {
@@ -45,6 +45,7 @@ const handleYearErrors = () => {
   yearLabel.classList.add("warning");
   yearWarningMsg.classList.add("warning");
   yearWarningMsg.classList.add("warning-msg");
+  // return warning message
   if (year.value == "") {
     yearWarningMsg.innerText = "This field is required";
   } else if (year.value > currentYear) {
@@ -69,14 +70,14 @@ const handleSubmit = (e) => {
   e.preventDefault();
   // VALIDATE USER INPUT
   // error flags
-  let dayError = false
-  let monthError = false
-  let yearError = false
+  let dayError = false;
+  let monthError = false;
+  let yearError = false;
 
   // check day input
   if (day.value == "" || day.value < 1) {
     handleDayErrors();
-    dayError - true
+    dayError - true;
   } else if (
     (day.value > 31 && month.value == 1) ||
     (day.value > 31 && month.value == 3) ||
@@ -91,22 +92,22 @@ const handleSubmit = (e) => {
     (day.value > 30 && month.value == 11)
   ) {
     handleDayErrors();
-    dayError = true
+    dayError = true;
   } else if (day.value >= 29 && month.value == 2) {
     // check if leap year
     checkLeapYear();
-  } 
+  }
   // check month input
   if (month.value == "" || month.value < 1 || month.value > 12) {
     handleMonthErrors();
-    monthError = true
+    monthError = true;
   }
   // check year input
   if (year.value == "" || year.value > currentYear) {
     handleYearErrors();
-    yearError = true
-  } 
-  
+    yearError = true;
+  }
+
   // if no errors, calculate stats
   if (!dayError && !monthError && !yearError) {
     calculateAndReturnStats();
