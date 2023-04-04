@@ -147,12 +147,9 @@ function calculateAndReturnStats() {
 document.getElementById("form").addEventListener("submit", handleSubmit);
 
 // auto shift focus
-day.addEventListener("keyup", function () {
+if (day.value == /^0?[1-9]|[1-2]\d|3[01]$/) {
   month.focus();
-});
-month.addEventListener("keyup", function () {
+}
+if (month.value == /^0?[1-9]|1[0-2]$/) {
   year.focus();
-});
-year.addEventListener("keyup", function () {
-  document.getElementById("submitBtn").focus();
-});
+}
