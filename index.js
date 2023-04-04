@@ -153,17 +153,22 @@ day.oninput = function () {
 month.oninput = function () {
   moveFocus(month, year, /^0?[1-9]|1[0-2]$/);
 };
+// year.oninput = function () {
+//   moveFocus()
+// }
 
 function moveFocus(currentInput, nextInput, pattern) {
   const value = currentInput.value;
   if (value.length === currentInput.maxLength) {
-    if (nextInput !== null) {
-      nextInput.focus();
+    if (pattern.test(value)) {
+      if (nextInput !== null) {
+        nextInput.focus();
+      } else {
+        handleSubmit();
+      }
     } else {
-      handleSubmit();
+      currentInput.value = "";
+      currentInput.focus();
     }
-  } else {
-    currentInput.value = "";
-    currentInput.focus();
   }
 }
