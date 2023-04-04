@@ -147,9 +147,23 @@ function calculateAndReturnStats() {
 document.getElementById("form").addEventListener("submit", handleSubmit);
 
 // auto shift focus
-if (day.value == /^0?[1-9]|[1-2]\d|3[01]$/) {
-  month.focus();
-}
-if (month.value == /^0?[1-9]|1[0-2]$/) {
-  year.focus();
+day.oninput = function () {
+  moveFocus(day, month, /^0?[1-9]|[1-2]\d|3[01]$/);
+};
+month.oninput = function () {
+  moveFocus(month, year, /^0?[1-9]|1[0-2]$/);
+};
+
+function moveFocus(currentInput, nextInput, pattern) {
+  const value = currentInput.value;
+  if (value.length === currentInput.maxLength) {
+    if (nextInput !== null) {
+      nextInput.focus();
+    } else {
+      handleSubmit();
+    }
+  } else {
+    currentInput.value = "";
+    currentInput.focus();
+  }
 }
