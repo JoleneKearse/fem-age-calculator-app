@@ -159,8 +159,8 @@ month.oninput = function () {
 
 function moveFocus(currentInput, nextInput, pattern) {
   const value = currentInput.value;
-  if (pattern.test(value)) {
-    if (value.length === currentInput.maxLength) {
+  if (value.length === currentInput.maxLength) {
+    if (pattern.test(value)) {
       if (nextInput !== null) {
         nextInput.focus();
       } else {
