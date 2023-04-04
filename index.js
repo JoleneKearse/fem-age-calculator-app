@@ -145,3 +145,14 @@ function calculateAndReturnStats() {
 }
 
 document.getElementById("form").addEventListener("submit", handleSubmit);
+
+// auto shift focus
+day.addEventListener("keyup", function () {
+  month.focus();
+});
+month.addEventListener("keyup", function () {
+  year.focus();
+});
+year.addEventListener("keyup", function () {
+  document.getElementById("submitBtn").focus();
+});
