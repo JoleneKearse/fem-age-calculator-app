@@ -48,6 +48,7 @@ I added `YYYY` as a placeholder, as it made more sense to me, and did a simple *
 ![mobile run through](screenshots/run-thru.gif)
 
 And here are my error messages in desktop:
+
 ![error message for empty input and out of range month and year in the future on desktop](screenshots/desktop-error-msgs.gif)
 
 ### Links 🖇️
