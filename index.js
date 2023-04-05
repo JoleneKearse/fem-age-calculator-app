@@ -153,9 +153,6 @@ day.oninput = function () {
 month.oninput = function () {
   moveFocus(month, year, /^0?[1-9]|1[0-2]$/);
 };
-// year.oninput = function () {
-//   moveFocus()
-// }
 
 function moveFocus(currentInput, nextInput, pattern) {
   const value = currentInput.value;

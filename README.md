@@ -34,6 +34,7 @@ Users should be able to:
 - [x] See hover and focus states for all interactive elements on the page
 - [x] **Bonus**: See the age numbers animate to their final number when the form is submitted
 - [x] **My Stretch Goal**: Account for leap years.
+- [x] **Another Stretch Goal**: Automatically move focus to the next input box after 2 digits are entered.
 
 ### Screenshot 📷
 
@@ -41,9 +42,13 @@ Here is the Figma design:
 ![figma design showing desktop with error messages and mobile](screenshots/figma-design.png)
 
 And here's my solution:
-![]()
+![empty mobile, full desktop, future date error message on desktop, empty input on mobile](screenshots/age-calc-social-preview.png)
 
+I added `YYYY` as a placeholder, as it made more sense to me, and did a simple **animation using classes**.
+![mobile run through](screenshots/run-thru.gif)
 
+And here are my error messages in desktop:
+![error message for empty input and out of range month and year in the future on desktop](screenshots/desktop-error-msgs.gif)
 
 ### Links 🖇️
 
